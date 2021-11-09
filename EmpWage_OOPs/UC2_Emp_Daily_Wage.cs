@@ -6,28 +6,32 @@ using System.Threading.Tasks;
 
 namespace EmpWage_OOPs
 {
-    class UC1_Emp_Attendance
+    class UC2_Emp_Daily_Wage
     {
-        public static void empCheck()
+        public static void DailyEmpWage()
         {
             int IS_FULL_TIME = 1;
+            int EMP_RATE_PER_HOUR = 20;
+            int empHrs = 0;
+            int empWage = 0;
             Random random = new Random();
-            int result = random.Next(0, 2);
-
-            if (result == IS_FULL_TIME)
+            int empCheck = random.Next(0, 2);
+            if (empCheck == IS_FULL_TIME)
             {
-                Console.WriteLine("Employee is Present");
+                empHrs = 8;
             }
             else
             {
-                Console.WriteLine("Employee is Absent");
+                empHrs = 0;
             }
+            empWage = empHrs * EMP_RATE_PER_HOUR;
+            Console.WriteLine("Employee Wage : " + empWage);
         }
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Problem. ");
 
-            UC1_Emp_Attendance.empCheck();
+            UC2_Emp_Daily_Wage.DailyEmpWage();
         }
     }
 }
