@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Emp_Wage14
+namespace EmpWage_OOPs
 {
     public interface IComputeEmpWage
     {
